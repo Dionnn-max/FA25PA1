@@ -7,7 +7,6 @@
 
 using namespace std;
 
-// payload robot, nothing fancy
 struct Robot {
     int id;
     string name;
@@ -26,7 +25,6 @@ struct Robot {
     }
 };
 
-// sim state (keeping it global-ish for lazy wiring)
 static int nextId = 1;
 static int score  = 0;
 static int quantum = 1;
@@ -37,7 +35,6 @@ static LinkedList<Robot> ring;     // main
 static LinkedList<Robot> ringA;    // split A
 static LinkedList<Robot> ringB;    // split B
 
-// ===== actions =====
 void addRobot(LinkedList<Robot>& rr) {
     string nm; int bat;
     cout << "Robot name: "; cin >> nm;
